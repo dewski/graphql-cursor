@@ -1,0 +1,8 @@
+services:
+  - postgresql
+
+before_script:
+  - psql -c 'create database graphql_cursor;' -U postgres
+
+env:
+- DATABASE_URL="postgres://postgres:@localhost/graphql_cursor?sslmode=disable&connect_timeout=30"
