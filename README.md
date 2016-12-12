@@ -1,6 +1,6 @@
 # grapqhl-cursor
 
-![](https://travis-ci.org/dewski/graphql-cursor.svg?branch=master)
+![](https://travis-ci.org/dewski/graphql-cursor.svg?branch=master) [![](https://godoc.org/github.com/dewski/graphql-cursor?status.svg)](http://godoc.org/github.com/dewski/graphql-cursor)
 
 Add GraphQL Relay Cursor Pagination with Postgres.
 
