@@ -40,6 +40,7 @@ func NewScopeWithFilters(args map[string]interface{}) Scope {
 		ConnectionArguments: relay.NewConnectionArguments(args),
 		Limit:               DefaultLimit,
 		OrderBy:             "id",
+		order:               "ASC",
 	}
 
 	return scope
@@ -53,10 +54,6 @@ func ApplyScope(builder *dat.SelectBuilder, scope Scope) (*dat.SelectBuilder, er
 
 	if scope.First != -1 && scope.Last != -1 {
 		return nil, ErrScopeInvalidFirstAndLast
-	}
-
-	if scope.After != "" || scope.First != -1 {
-		scope.order = "ASC"
 	}
 
 	if scope.Before != "" || scope.Last != -1 {
